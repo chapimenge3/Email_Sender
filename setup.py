@@ -4,11 +4,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="email_sender-chapimenge", # Replace with your own username
-    version="0.0.1",
+    name="email_sender", 
+    version="0.1",
     author="Temkin Mengistu",
     author_email="chapimenge3@gmail.com",
-    description="Easy Email sender package",
+    description="Easy Email sender Python package",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/chapimenge3/Email_Sender",
