@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="python email_sender", 
+    name="python-email_sender", 
     version="0.1",
     author="Temkin Mengistu",
     author_email="chapimenge3@gmail.com",
