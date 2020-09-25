@@ -44,22 +44,30 @@ class Mail:
                 raise Exception(
                     "Password can't be None , check your envName in .env file")
         # set email
-        self.email = email
+        self.email = email 
         
         # create secure connection
         context = ssl.create_default_context()
-        
+        try:
+            pass
         # start the SMTP server using host and port
-        self.server = SMTP(host=host, port=port)
+            self.server = SMTP(host=host, port=port)
+            
+            self.server.ehlo()
+            self.server.starttls(context=context)  # secure the connection
+            self.server.ehlo()
+            
+            self.server.login(self.email, self.password)
+            print('Successfully logged in')
+        except Exception as exception:
+            print('unsuccessfull login trial')
+            print(exception)
         
-        self.server.ehlo()
-        self.server.starttls(context=context)  # secure the connection
-        self.server.ehlo()
-        
-        self.server.login(self.email, self.password)
-        
-        print('done connecting')
 
+    def send_email(self, receiverEmail, message):
+        emailResponse = self.server.sendmail(self.email, receiverEmail, message)
+        return emailResponse
+        
     def __del__(self):
         self.server.quit()
         print("Good bye...")

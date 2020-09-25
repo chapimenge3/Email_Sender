@@ -130,3 +130,7 @@ dmypy.json
 
 # VSCode settings
 .vscode/
+
+# test files
+check.py
+check.py
