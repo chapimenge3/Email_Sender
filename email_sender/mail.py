@@ -58,16 +58,23 @@ class Mail:
             self.server.ehlo()
             
             self.server.login(self.email, self.password)
-            print('Successfully logged in')
+            # print('Successfully logged in')
         except Exception as exception:
-            print('unsuccessfull login trial')
+            # print('unsuccessfull login trial')
             print(exception)
         
 
     def send_email(self, receiverEmail, message):
+        '''
+        it uses self.email as email 
+        send email message to the receiverEmail
+        '''
         emailResponse = self.server.sendmail(self.email, receiverEmail, message)
         return emailResponse
         
     def __del__(self):
+        '''
+        Destructor , to close the server
+        '''
         self.server.quit()
         print("Good bye...")
