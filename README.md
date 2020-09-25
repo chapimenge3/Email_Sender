@@ -2,8 +2,9 @@
 Email_Sender is Python Package For Sending Email Easily. This package is trying to help programmer save time adjusting code for sending email.
 
 ## Installation 
+you should have [python 3](https://www.python.org/download/releases/3.0/)
 ```shell
-$ pip install email_sender
+$ pip3 install email_sender
 ```
 
 ## Usage 
@@ -38,11 +39,18 @@ This is testing email message
 '''
 mail.send_email(receiverEmail, message)
 ```
+### Clone
+if you want to clone and use the repo use the **requirement.txt** file
+
+```shel
+pip3 install -r requirements.txt 
+```
 
 ### About Developer 
 My Name is Temking Mengistu . I am Student at [Adama Science and Technology University](http://www.astu.edu.et/) in field of Computer Science and Engineering. 
 **Follow me on** 
    - [Github](https://github.com/chapimenge3)
    - [Linkedin](https://www.linkedin.com/in/chapi-menge/)
+
 
 ### ©chapimenge 2020
