@@ -4,7 +4,7 @@ Email_Sender is Python Package For Sending Email Easily. This package is trying 
 ## Installation 
 you should have [python 3](https://www.python.org/download/releases/3.0/)
 ```shell
-$ pip3 install email_sender
+$ pip3 install py-send-e-mail
 ```
 
 ## Usage 
